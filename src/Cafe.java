@@ -11,10 +11,4 @@ public class Cafe implements Drinks{
             element.drinks(createDrink);
         }
     }
-    @Override
-    public void type(CreateDrink createDrink) {
-        for (Drinks element : drinks) {
-            element.type(createDrink);
-        }
-    }
 }

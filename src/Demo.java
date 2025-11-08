@@ -5,6 +5,5 @@ public class Demo {
 
         System.out.println("===Master coffee===");
         cafe.drinks(master);
-        cafe.type(master);
     }
 }
