@@ -4,6 +4,6 @@ public class Coffee implements Cafe {
     @Override
     public void accept(DrinkVisitor visit) {
         visit.drinkCoffee(this);
-        System.out.println("Drinking Coffee");
+        System.out.println("coffee!");
     }
 }
