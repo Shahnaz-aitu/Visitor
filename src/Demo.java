@@ -1,9 +1,18 @@
-public class Demo {
-    public void doDrink(){
-        Cafe cafe = new Cafe();
-        CreateDrink master=new MasterCoffee();
+import Visitor.*;
 
-        System.out.println("===Master coffee===");
-        cafe.drinks(master);
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Demo {
+    public void demo() {
+        Cafe tea = new Tea();
+        Cafe coffee = new Coffee();
+        DrinkVisitor cafeMaster = new MasterCoffee();
+        coffee.accept(cafeMaster);
+        tea.accept(cafeMaster);
+        DrinkVisitor cafeEspresso = new EspressoDay();
+        tea.accept(cafeEspresso);
+        coffee.accept(cafeEspresso);
     }
 }
+
