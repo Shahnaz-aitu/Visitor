@@ -2,14 +2,13 @@ import Visitor.*;
 
 public class Demo {
     public void demo() {
-        Cafe tea = new Tea();
-        Cafe coffee = new Coffee();
-        DrinkVisitor cafeMaster = new TakeDrink();
-        coffee.accept(cafeMaster);
-        tea.accept(cafeMaster);
-        DrinkVisitor cafeEspresso = new DoDrink();
-        tea.accept(cafeEspresso);
-        coffee.accept(cafeEspresso);
+        Cafe cafe1=new Coffee();
+        cafe1.accept(new DoDrink());
+        cafe1.accept(new TakeVisitor());
+        Cafe cafe2=new Tea();
+        cafe2.accept(new DoDrink());
+        cafe2.accept(new TakeVisitor());
+
     }
 }
 
